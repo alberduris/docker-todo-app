@@ -6,9 +6,9 @@ services:
      command: sh -c "yarn install && yarn run dev" # Usually put the "command" next to the "image"
      ports:
        - 80:3000 # The port mapping
-     working_dir: /app # On Docker compose relative paths from current directory can be used
+     working_dir: /docker-todo-app/app # On Docker compose relative paths from current directory can be used
      volumes:
-       - ./:/app
+       - ./:/docker-todo-app/app
      environment: # Environment variables definitions
        MYSQL_HOST: mysql
        MYSQL_USER: root
